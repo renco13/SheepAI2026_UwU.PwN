@@ -1,0 +1,47 @@
+@import "maplibre-gl/dist/maplibre-gl.css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 44 48% 96%;
+    --foreground: 155 29% 13%;
+    --card: 0 0% 100%;
+    --card-foreground: 155 29% 13%;
+    --primary: 154 56% 28%;
+    --primary-foreground: 45 80% 96%;
+    --secondary: 39 89% 63%;
+    --secondary-foreground: 155 29% 13%;
+    --muted: 46 38% 90%;
+    --muted-foreground: 154 14% 37%;
+    --accent: 184 65% 34%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 5 76% 48%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 47 28% 82%;
+    --input: 47 28% 82%;
+    --ring: 154 56% 28%;
+    --radius: 1.1rem;
+  }
+
+  * { @apply border-border; }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    background-image:
+      radial-gradient(circle at top left, rgba(242, 183, 83, 0.22), transparent 28rem),
+      radial-gradient(circle at bottom right, rgba(39, 145, 150, 0.16), transparent 24rem);
+  }
+}
+
+.maplibregl-popup-content {
+  border-radius: 16px;
+  padding: 0;
+  overflow: hidden;
+}
+
+.maplibregl-ctrl-group {
+  border-radius: 14px !important;
+  overflow: hidden;
+}
